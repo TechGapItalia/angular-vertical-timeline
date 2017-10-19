@@ -1,5 +1,15 @@
 # Angular Vertical Timeline
 
+## Branch organization
+
+This repository follows the [Git Flow]() approach.
+
+* `master` is the stable branch with tagged releases
+* `develop` is the snapshot branch, it's mostly stable but active development is done on this branch.
+* `feature/*` are temporary, working branches that are not supposed to be stable or usable. They are deleted once merged into `develop`
+
+For most uses `master` is the only branch to consider.
+
 ## Installation
 
 To install this library, run:
