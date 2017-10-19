@@ -1,6 +1,6 @@
 {
   "name": "angular-vertical-timeline",
-  "version": "0.1.0-SNAPSHOT`",
+  "version": "0.1.0-SNAPSHOT",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
