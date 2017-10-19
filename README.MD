@@ -54,14 +54,13 @@ export class AppModule { }
   
   <!-- Add some cards to the timeline. It works with *ngFor too -->
   <vertical-timeline-card>
-    <h1>Hello I'm a card!</h1>
-    <p>I'm in the timeline</p>
+   <h1>Today</h1>
   </vertical-timeline-card>
 
-  <vertical-timeline-card *ngFor="let cat of cats">
-    <h2>{{cat.meow}}</h2>
+  <vertical-timeline-card [dateValue]="tomorrow"> <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->
+    <h1>Tomorrow</h1>
   </vertical-timeline-card>
-
+  
 </vertical-timeline>
 ```
 
