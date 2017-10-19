@@ -52,6 +52,12 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
 export class AppModule { }
 ```
 
+Also import the stylesheet in your `styles.css` 
+
+```css
+@import "~angular-vertical-timeline/vertical-timeline.css";
+```
+
 ## Usage
 
 ```html
