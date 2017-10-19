@@ -16,18 +16,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/TechGapItalia/angular-vertical-timeline"
   },
   "author": {
     "name": "Matteo Joliveau",
     "email": "m.joliveau@koor.it"
   },
-  "keywords": [
-    "angular"
+  "contributors": [
+    {
+      "name": "TechGap Italia Open Source Project",
+      "email": "opensource@techgap.it",
+      "url": "techgap.it"
+    }
   ],
-  "license": "MIT",
+  "keywords": [
+    "angular",
+    "vertical",
+    "timeline",
+    "material"
+  ],
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/TechGapItalia/angular-vertical-timeline/issues"
   },
   "devDependencies": {
     "@angular/common": "^4.0.0",

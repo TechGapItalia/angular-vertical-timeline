@@ -1,4 +1,4 @@
-# angular-vertical-timeline
+# Angular Vertical Timeline
 
 ## Installation
 
@@ -7,16 +7,14 @@ To install this library, run:
 ```bash
 $ npm install angular-vertical-timeline --save
 ```
-
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
+Or:
 ```bash
-$ npm install angular-vertical-timeline
+yarn add angular-vertical-timeline
 ```
 
-and then from your Angular `AppModule`:
+## Importing
+
+Import `VerticalTimelineModule` into your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,8 +22,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'angular-vertical-timeline';
+// Import the timeline library
+import { VerticalTimelineModule } from 'angular-vertical-timeline';
 
 @NgModule({
   declarations: [
@@ -34,8 +32,8 @@ import { SampleModule } from 'angular-vertical-timeline';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    // Specify the timeline as an import
+    VerticalTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,19 +41,37 @@ import { SampleModule } from 'angular-vertical-timeline';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+## Usage
 
-```xml
-<!-- You can now use your library component in app.component.html -->
+```html
+<!-- In app.component.html -->
 <h1>
-  {{title}}
+  Hello Angular!
 </h1>
-<sampleComponent></sampleComponent>
+
+<!-- Add the timeline -->
+<vertical-timeline>
+  
+  <!-- Add some cards to the timeline. It works with *ngFor too -->
+  <vertical-timeline-card>
+    <h1>Hello I'm a card!</h1>
+    <p>I'm in the timeline</p>
+  </vertical-timeline-card>
+
+  <vertical-timeline-card *ngFor="let cat of cats">
+    <h2>{{cat.meow}}</h2>
+  </vertical-timeline-card>
+
+</vertical-timeline>
 ```
+
+Example result:
+
+![Angular Vertical Timeline](https://imgur.com/fD1Ihuu)
 
 ## Development
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
+To generate all `*.js`, `*.d.ts` and `*.metadata.json` files in `dist/` folder:
 
 ```bash
 $ npm run build
@@ -69,4 +85,4 @@ $ npm run lint
 
 ## License
 
-MIT © [Matteo Joliveau](mailto:m.joliveau@koor.it)
+Apache License 2.0 © [TechGap Italia](mailto:opensource@techgap.it)
