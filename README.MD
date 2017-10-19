@@ -63,11 +63,14 @@ export class AppModule { }
 <vertical-timeline>
   
   <!-- Add some cards to the timeline. It works with *ngFor too -->
+
+  <!-- If no value is passed for the date, the current time is used. -->
   <vertical-timeline-card>
    <h1>Today</h1>
   </vertical-timeline-card>
 
-  <vertical-timeline-card [dateValue]="tomorrow"> <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->
+  <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->    
+  <vertical-timeline-card [dateValue]="tomorrow">
     <h1>Tomorrow</h1>
   </vertical-timeline-card>
   
