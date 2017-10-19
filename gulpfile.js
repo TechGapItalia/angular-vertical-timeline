@@ -6,7 +6,9 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   del = require('del'),
   runSequence = require('run-sequence'),
-  inlineResources = require('./tools/gulp/inline-resources');
+  inlineResources = require('./tools/gulp/inline-resources'),
+  sass = require('gulp-sass')
+  ;
 
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
@@ -43,6 +45,11 @@ gulp.task('inline-resources', function () {
     .then(() => inlineResources(tmpFolder));
 });
 
+gulp.task('compile-sass', function() {
+  return gulp.src([`${tmpFolder}/**/*.sass`, `${tmpFolder}/**/*.scss`])
+  .pipe(sass.sync().on('error', sass.logError))
+  .pipe(gulp.dest(tmpFolder));
+})
 
 /**
  * 4. Run the Angular compiler, ngc, on the /.tmp folder. This will output all
@@ -153,6 +160,11 @@ gulp.task('copy:build', function () {
     .pipe(gulp.dest(distFolder));
 });
 
+gulp.task('copy:css', function() {
+  return gulp.src(`${tmpFolder}/**/*.css`)
+  .pipe(gulp.dest(distFolder))
+})
+
 /**
  * 8. Copy package.json from /src to /dist
  */
@@ -188,10 +200,12 @@ gulp.task('compile', function () {
     'clean:dist',
     'copy:source',
     'inline-resources',
+    'compile-sass',
     'ngc',
     'rollup:fesm',
     'rollup:umd',
     'copy:build',
+    'copy:css',
     'copy:manifest',
     'copy:readme',
     'clean:build',

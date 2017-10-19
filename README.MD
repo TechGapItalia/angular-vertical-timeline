@@ -3,7 +3,7 @@
 
 ## Branch organization
 
-This repository follows the [Git Flow]() approach.
+This repository follows the [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/) approach.
 
 * `master` is the stable branch with tagged releases
 * `develop` is the snapshot branch, it's mostly stable but active development is done on this branch.
@@ -52,6 +52,12 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
 export class AppModule { }
 ```
 
+Also import the stylesheet in your `styles.css` 
+
+```css
+@import "~angular-vertical-timeline/vertical-timeline.css";
+```
+
 ## Usage
 
 ```html
@@ -64,11 +70,14 @@ export class AppModule { }
 <vertical-timeline>
   
   <!-- Add some cards to the timeline. It works with *ngFor too -->
+
+  <!-- If no value is passed for the date, the current time is used. -->
   <vertical-timeline-card>
    <h1>Today</h1>
   </vertical-timeline-card>
 
-  <vertical-timeline-card [dateValue]="tomorrow"> <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->
+  <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->    
+  <vertical-timeline-card [dateValue]="tomorrow">
     <h1>Tomorrow</h1>
   </vertical-timeline-card>
   
