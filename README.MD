@@ -67,7 +67,7 @@ export class AppModule { }
 
 Example result:
 
-![Angular Vertical Timeline](https://imgur.com/fD1Ihuu)
+![Angular Vertical Timeline](https://image.ibb.co/d4zCam/angular_timeline.png)
 
 ## Development
 
