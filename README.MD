@@ -2,7 +2,7 @@
 
 ## Branch organization
 
-This repository follows the [Git Flow]() approach.
+This repository follows the [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/) approach.
 
 * `master` is the stable branch with tagged releases
 * `develop` is the snapshot branch, it's mostly stable but active development is done on this branch.
