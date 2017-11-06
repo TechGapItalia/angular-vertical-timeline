@@ -1,6 +1,7 @@
 # Angular Vertical Timeline  
 [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
+[![Build Status](https://travis-ci.org/TechGapItalia/angular-vertical-timeline.svg)](https://travis-ci.org/TechGapItalia/angular-vertical-timeline.svg)
+[![npm version](https://badge.fury.io/js/angular-vertical-timeline.svg)](https://badge.fury.io/js/angular-vertical-timeline)
 ## Branch organization
 
 This repository follows the [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/) approach.
