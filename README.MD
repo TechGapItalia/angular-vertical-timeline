@@ -89,6 +89,30 @@ Example result:
 
 ![Angular Vertical Timeline](https://image.ibb.co/d4zCam/angular_timeline.png)
 
+You can also specify a color for each card. 
+```html
+<vertical-timeline>
+
+            <vertical-timeline-card [color]="'#08D198'">
+                <h1>Today</h1>
+            </vertical-timeline-card>
+
+            <vertical-timeline-card [color]="'#331111'">
+                <h1>Tomorrow</h1>
+            </vertical-timeline-card> 
+            
+            <vertical-timeline-card [color]="'#08D198'">
+                <h1>Today</h1>
+            </vertical-timeline-card>
+
+            <vertical-timeline-card [color]="'#331111'">
+                <h1>Tomorrow</h1>
+            </vertical-timeline-card>
+
+        </vertical-timeline>
+```
+
+![Angular Colored Timeline](https://image.ibb.co/jRkuaw/timeline_color.png)
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files in `dist/` folder:
@@ -103,6 +127,12 @@ To lint all `*.ts` files:
 $ npm run lint
 ```
 
+To playtest the component in the browser:
+```bash
+$ npm run playground
+```
+
 ## License
 
-Apache License 2.0 © [TechGap Italia](mailto:opensource@techgap.it)
+Apache License 2.0 © [TechGap Italia](http://techgap.it)  
+[Email us](mailto:opensource@techgap.it)
