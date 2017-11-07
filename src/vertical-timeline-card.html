@@ -1,8 +1,11 @@
-<div class="timeline-img">
-  <p>{{dateValue | date: "HH:mm"}}</p>
+<div class="timeline-img" [style.background]="color">
+    <p [style.color]="textColor">{{dateValue | date: "HH:mm"}}</p>
 </div>
 
 <div class="timeline-content">
-  <div class="date">{{dateValue | date:"dd MMMM yyyy"}}</div>
-  <ng-content></ng-content>
+    <div class="date" [style.background]="color">
+        <p [style.color]="textColor">{{dateValue | date:"dd MMMM yyyy"}}</p>
+    </div>
+
+    <div style="margin-top: 6%;"><ng-content></ng-content></div>
 </div>

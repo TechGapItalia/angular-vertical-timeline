@@ -11,8 +11,6 @@ src/*.d.ts
 .idea
 .project
 .settings
-.idea/*
-*.iml
 
 # VS Code
 .vscode/*
