@@ -8,11 +8,11 @@ export class VerticalTimelineCardComponent implements OnInit {
 
     @Input() public dateValue: Date;
     @Input() public color: string;
-    @HostBinding('class.timeline-item') public someField: boolean = false;
+    @HostBinding('class.timeline-item') public isATimelineItem: boolean = false;
     public textColor: string;
 
     public ngOnInit() {
-        this.someField = true; // set class `someClass` on `<body>`
+        this.isATimelineItem = true; // set class `timeline-item` on host `<div>`
         if (this.dateValue === null || this.dateValue === undefined) {
             this.dateValue = new Date();
         }
@@ -40,6 +40,9 @@ export class VerticalTimelineCardComponent implements OnInit {
 
     // HSP rule sqrt( .299 R2 + .587 G2 + .114 B2 ), see http://alienryderflex.com/hsp.html
     private calculateBrightness(R: number, G: number, B: number): number {
-        return Math.sqrt((0.299 * Math.pow(R, 2)) + (0.587 * Math.pow(G, 2)) + (0.114 * Math.pow(B, 2)));
+        return Math.sqrt((0.299 * Math.pow(R, 2)) +
+            (0.587 * Math.pow(G, 2)) +
+            (0.114 * Math.pow(B, 2))
+        );
     }
 }
