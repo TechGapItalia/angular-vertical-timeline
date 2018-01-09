@@ -55,7 +55,7 @@ export class AppModule { }
 Also import the stylesheet in your `styles.css` 
 
 ```css
-@import "~angular-vertical-timeline/vertical-timeline.css";
+@import "~angular-vertical-timeline/dist/vertical-timeline.css";
 ```
 
 ## Usage
@@ -99,7 +99,7 @@ $ npm run build
 To lint all `*.ts` files:
 
 ```bash
-$ npm run lint
+$ npm run tslint
 ```
 
 ## License
