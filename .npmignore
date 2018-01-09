@@ -1,22 +1,15 @@
 # Node
-node_modules/*
+node_modules
 npm-debug.log
-docs/*
-# DO NOT IGNORE TYPESCRIPT FILES FOR NPM
-# TypeScript
-# *.js
-# *.map
-# *.d.ts
+
+# Yarn
+yarn-error.log
 
 # JetBrains
-.idea
-.project
-.settings
-.idea/*
-*.iml
+.idea/
 
 # VS Code
-.vscode/*
+.vscode/
 
 # Windows
 Thumbs.db
@@ -24,11 +17,12 @@ Desktop.ini
 
 # Mac
 .DS_Store
-**/.DS_Store
 
-# Ngc generated files
-**/*.ngfactory.ts
+# Temporary files
+coverage/
+demo/
+docs
+tmp
 
 # Library files
-src/*
-build/*
+src/

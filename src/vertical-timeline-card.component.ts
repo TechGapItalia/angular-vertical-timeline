@@ -1,26 +1,18 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, HostBinding} from '@angular/core';
 
 @Component({
     selector: 'vertical-timeline-card',
     templateUrl: 'vertical-timeline-card.html',
-    host: {
-        ['class']: 'timeline-item'
-    },
-    styleUrls: [
-        'vertical-timeline.scss'
-    ]
 })
-
 export class VerticalTimelineCardComponent implements OnInit {
 
-    @Input() dateValue: Date;
-    @Input() color: string;
-    textColor: string;
+    @Input() public dateValue: Date;
+    @Input() public color: string;
+    @HostBinding('class.timeline-item') public someField: boolean = false;
+    public textColor: string;
 
-    constructor() {
-    }
-
-    ngOnInit() {
+    public ngOnInit() {
+        this.someField = true; // set class `someClass` on `<body>`
         if (this.dateValue === null || this.dateValue === undefined) {
             this.dateValue = new Date();
         }
@@ -36,10 +28,10 @@ export class VerticalTimelineCardComponent implements OnInit {
         }
     }
 
-    isLight(hexColor: string): boolean {
-        const R = Number.parseInt(hexColor.slice(1, 3), 16);
-        const G = Number.parseInt(hexColor.slice(3, 5), 16);
-        const B = Number.parseInt(hexColor.slice(5, 7), 16);
+    private isLight(hexColor: string): boolean {
+        const R = parseInt(hexColor.slice(1, 3), 16);
+        const G = parseInt(hexColor.slice(3, 5), 16);
+        const B = parseInt(hexColor.slice(5, 7), 16);
         const maxBrightness = this.calculateBrightness(255, 255, 255);
         const brightness = this.calculateBrightness(R, G, B);
         const pBrightness = brightness / maxBrightness;
