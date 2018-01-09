@@ -1,10 +1,13 @@
 {
   "name": "angular-vertical-timeline",
-  "version": "0.3.0-SNAPSHOT",
+  "version": "0.3.0-SNAPSHOT.2",
   "description": "Angular library seed",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "license": "Apache-2.0",
   "keywords": [
     "angular",
