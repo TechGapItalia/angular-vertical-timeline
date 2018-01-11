@@ -215,6 +215,9 @@ blockquote {
             right: 0;
             left: auto;
           }
+          .inner-content {
+            margin-top: 11%
+          }
         }
       }
 
@@ -222,6 +225,10 @@ blockquote {
 
         .timeline-content {
           margin-top: 35px;
+
+          .inner-content {
+            margin-top: 20%;
+          }
 
           &::after {
             content: '';
@@ -240,4 +247,8 @@ blockquote {
     }
   }
 
+}
+
+.inner-content {
+  margin-top: 6%;
 }
