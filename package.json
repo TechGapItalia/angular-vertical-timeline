@@ -1,6 +1,6 @@
 {
   "name": "angular-vertical-timeline",
-  "version": "0.4.0-SNAPSHOT.2",
+  "version": "0.4.0-SNAPSHOT.3",
   "description": "Angular library seed",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
