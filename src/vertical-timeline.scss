@@ -26,6 +26,14 @@ $accent: $primary;
   margin-bottom: 70px;
   //min-height:;
 
+  &:nth-child(odd) {
+    .timeline-content {
+      .inner-content {
+        margin-right: 105px;
+      }
+    }
+  }
+
   &:nth-child(even) {
 
     .timeline-content {
@@ -216,7 +224,7 @@ blockquote {
             left: auto;
           }
           .inner-content {
-            margin-top: 11%
+            margin-top: 35px
           }
         }
       }
@@ -227,7 +235,8 @@ blockquote {
           margin-top: 35px;
 
           .inner-content {
-            margin-top: 20%;
+            margin-top: 65px;
+            margin-right: 0;
           }
 
           &::after {
@@ -250,5 +259,6 @@ blockquote {
 }
 
 .inner-content {
-  margin-top: 6%;
+  margin-top: 35px;
+  text-align: justify;
 }
