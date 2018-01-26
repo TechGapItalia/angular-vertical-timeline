@@ -276,7 +276,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;div&nbsp;class&#x3D;&quot;timeline-img&quot;&nbsp;[style.background]&#x3D;&quot;color&quot;&gt;<br>&nbsp;&nbsp;&lt;p&nbsp;[style.color]&#x3D;&quot;textColor&quot;&gt;{{dateValue&nbsp;|&nbsp;date:&nbsp;&quot;HH:mm&quot;}}&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div&nbsp;class&#x3D;&quot;timeline-content&quot;&gt;<br>&nbsp;&nbsp;&lt;div&nbsp;class&#x3D;&quot;date&quot;&nbsp;[style.background]&#x3D;&quot;color&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;[style.color]&#x3D;&quot;textColor&quot;&gt;{{dateValue&nbsp;|&nbsp;date:&quot;dd&nbsp;MMMM&nbsp;yyyy&quot;}}&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br><br>&nbsp;&nbsp;&lt;div&nbsp;style&#x3D;&quot;margin-top:&nbsp;6%;&quot;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/div&gt;<br>&lt;/div&gt;<br></code></td>
+                <td class="col-md-9"><code>&lt;div&nbsp;class&#x3D;&quot;timeline-img&quot;&nbsp;[style.background]&#x3D;&quot;color&quot;&gt;<br>&nbsp;&nbsp;&lt;p&nbsp;[style.color]&#x3D;&quot;textColor&quot;&gt;{{dateValue&nbsp;|&nbsp;date:&nbsp;&quot;HH:mm&quot;}}&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div&nbsp;class&#x3D;&quot;timeline-content&quot;&gt;<br>&nbsp;&nbsp;&lt;div&nbsp;class&#x3D;&quot;date&quot;&nbsp;[style.background]&#x3D;&quot;color&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;[style.color]&#x3D;&quot;textColor&quot;&gt;{{dateValue&nbsp;|&nbsp;date:&quot;dd&nbsp;MMMM&nbsp;yyyy&quot;}}&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br><br>&nbsp;&nbsp;&lt;div&nbsp;class&#x3D;&quot;inner-content&quot;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/div&gt;<br>&lt;/div&gt;<br></code></td>
             </tr>
 
 
@@ -376,7 +376,7 @@
             &lt;p [style.color]&#x3D;&quot;textColor&quot;&gt;{{dateValue | date:&quot;dd MMMM yyyy&quot;}}&lt;/p&gt;
         &lt;/div&gt;
 
-        &lt;div style&#x3D;&quot;margin-top: 6%;&quot;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;inner-content&quot;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/div&gt;
       &lt;/div&gt;
     &#x60;,
 })

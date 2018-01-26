@@ -7,6 +7,7 @@ import {Component, Input, OnInit, HostBinding} from '@angular/core';
 export class VerticalTimelineCardComponent implements OnInit {
 
     @Input() public dateValue: Date;
+    @Input() public timeString: string;
     @Input() public color: string;
     @HostBinding('class.timeline-item') public isATimelineItem: boolean = false;
     public textColor: string;
