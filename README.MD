@@ -84,6 +84,23 @@ Also import the stylesheet in your `styles.css`
 </vertical-timeline>
 ```
 
+#### Angular 4 only
+To bypass [this bug](https://github.com/angular/angular/issues/9524) 
+in the Angular Date Pipe on **Microsoft Edge** and **Internet Explorer**, 
+since version 0.4.1 you can supply a string to `timeString` with 
+the correct time to output in the timeline.   
+If no value is passed, then the 
+regular `dateValue` and Date Pipe is used.  
+No need for this if your application is using **Angular 5**.
+```html
+  <vertical-timeline-card 
+  [dateValue]="myDate"
+  [timeString]="'15:18'"
+  >
+    <h1>Tomorrow</h1>
+  </vertical-timeline-card>
+```
+
 Example result:
 
 ![Angular Vertical Timeline](https://image.ibb.co/d4zCam/angular_timeline.png)
