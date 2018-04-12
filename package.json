@@ -1,6 +1,6 @@
 {
   "name": "angular-vertical-timeline",
-  "version": "0.5.0-SNAPSHOT.2",
+  "version": "0.5.0-SNAPSHOT.3",
   "description": "Vertical Timeline component for angular 4+",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
