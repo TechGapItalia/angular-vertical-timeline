@@ -262,3 +262,8 @@ blockquote {
   margin-top: 35px;
   text-align: justify;
 }
+
+.disabled-element {
+  pointer-events: none;
+  filter: opacity(35%);
+}

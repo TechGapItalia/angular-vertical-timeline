@@ -11,7 +11,7 @@ import {Component} from '@angular/core';
         tail meatloaf. Tri-tip prosciutto hamburger meatloaf biltong shank kevin. Kevin rump picanha pastrami, cupim
         turkey shank beef ribs short ribs ground round hamburger. Ball tip burgdoggen strip steak porchetta landjaeger.
       </vertical-timeline-card>
-      <vertical-timeline-card>
+      <vertical-timeline-card [disabled]="true">
         Beef ribs andouille shank, tri-tip ribeye cow salami jerky tail bacon porchetta. Fatback
         buffalo ribeye, prosciutto kielbasa pork ball tip sausage rump drumstick. Short loin strip steak salami, alcatra
         cupim turkey buffalo meatloaf bresaola chicken tri-tip picanha. Pancetta kevin frankfurter cow ham drumstick

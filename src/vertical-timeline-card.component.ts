@@ -9,6 +9,7 @@ export class VerticalTimelineCardComponent implements OnInit {
     @Input() public dateValue: Date;
     @Input() public timeString: string;
     @Input() public color: string;
+    @Input() public disabled: boolean = false;
     @HostBinding('class.timeline-item') public isATimelineItem: boolean = false;
     public textColor: string;
 
