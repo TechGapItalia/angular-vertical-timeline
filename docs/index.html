@@ -80,14 +80,14 @@
                         <a href="modules/VerticalTimelineModule.html" data-type="entity-link">VerticalTimelineModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-components-links-module-VerticalTimelineModule-6c71b517-90ed-4061-ac83-d8302be6d76c"
+                                        data-target="#xs-components-links-module-VerticalTimelineModule-4ffce9f6-f2d8-492f-86bc-415614c8b325"
                                     >
                                     <span class="fa fa-fw fa-cogs"></span>
                                     <span>Components</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="xs-components-links-module-VerticalTimelineModule-6c71b517-90ed-4061-ac83-d8302be6d76c"
+                                        id="xs-components-links-module-VerticalTimelineModule-4ffce9f6-f2d8-492f-86bc-415614c8b325"
                                     >
                                         <li class="link">
                                             <a href="components/VerticalTimelineComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">VerticalTimelineComponent</a>
@@ -188,14 +188,14 @@
                         <a href="modules/VerticalTimelineModule.html" data-type="entity-link">VerticalTimelineModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#components-links-module-VerticalTimelineModule-6c71b517-90ed-4061-ac83-d8302be6d76c"
+                                        data-target="#components-links-module-VerticalTimelineModule-4ffce9f6-f2d8-492f-86bc-415614c8b325"
 >
                                     <span class="fa fa-fw fa-cogs"></span>
                                     <span>Components</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="components-links-module-VerticalTimelineModule-6c71b517-90ed-4061-ac83-d8302be6d76c"
+                                        id="components-links-module-VerticalTimelineModule-4ffce9f6-f2d8-492f-86bc-415614c8b325"
 >
                                         <li class="link">
                                             <a href="components/VerticalTimelineComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">VerticalTimelineComponent</a>
@@ -245,6 +245,8 @@
 <li><code>feature/*</code> are temporary, working branches that are not supposed to be stable or usable. They are deleted once merged into <code>develop</code></li>
 </ul>
 <p>For most uses <code>master</code> is the only branch to consider.</p>
+<h2 id="angular-4">Angular 4</h2>
+<p>Version 0.6.0 depends on Angular 5. It should be fine for most users, but if you want guaranteed Angular 4 compatibility you should use 0.5.X. This version will be maintained alongside mainline in the 0.5.x branch.</p>
 <h2 id="installation">Installation</h2>
 <p>To install this library, run:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm install angular-vertical-timeline --save</code></pre><p>Or:</p>
@@ -271,7 +273,7 @@ import { VerticalTimelineModule } from &#39;angular-vertical-timeline&#39;;
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }</code></pre><p>Also import the stylesheet in your <code>styles.css</code> </p>
+export class AppModule { }</code></pre><p>Also import the stylesheet in your <code>styles.css</code></p>
 <pre class="line-numbers"><code class="language-css">&#64;import &quot;~angular-vertical-timeline/dist/vertical-timeline.css&quot;;</code></pre><h2 id="usage">Usage</h2>
 <pre class="line-numbers"><code class="language-html">&lt;!-- In app.component.html --&gt;
 &lt;h1&gt;
@@ -288,18 +290,20 @@ export class AppModule { }</code></pre><p>Also import the stylesheet in your <co
    &lt;h1&gt;Today&lt;/h1&gt;
   &lt;/vertical-timeline-card&gt;
 
-  &lt;!-- tomorrow = new Date(2017, 9, 20, 14,34); --&gt;    
+  &lt;!-- tomorrow = new Date(2017, 9, 20, 14,34); --&gt;
   &lt;vertical-timeline-card [dateValue]=&quot;tomorrow&quot;&gt;
     &lt;h1&gt;Tomorrow&lt;/h1&gt;
   &lt;/vertical-timeline-card&gt;
 
 &lt;/vertical-timeline&gt;</code></pre><h4 id="angular-4-only">Angular 4 only</h4>
-<p>To bypass <a href="https://github.com/angular/angular/issues/9524">this bug</a> 
-in the Angular Date Pipe on <strong>Microsoft Edge</strong> and <strong>Internet Explorer</strong>, 
-since version 0.4.1 you can supply a string to <code>timeString</code> with 
-the correct time to output in the timeline.<br>If no value is passed, then the 
-regular <code>dateValue</code> and Date Pipe is used.<br>No need for this if your application is using <strong>Angular 5</strong>.</p>
-<pre class="line-numbers"><code class="language-html">  &lt;vertical-timeline-card 
+<p>To bypass <a href="https://github.com/angular/angular/issues/9524">this bug</a>
+in the Angular Date Pipe on <strong>Microsoft Edge</strong> and <strong>Internet Explorer</strong>,
+since version 0.4.1 you can supply a string to <code>timeString</code> with
+the correct time to output in the timeline.
+If no value is passed, then the
+regular <code>dateValue</code> and Date Pipe is used.
+No need for this if your application is using <strong>Angular 5</strong>.</p>
+<pre class="line-numbers"><code class="language-html">  &lt;vertical-timeline-card
   [dateValue]=&quot;myDate&quot;
   [timeString]=&quot;&#39;15:18&#39;&quot;
   &gt;
