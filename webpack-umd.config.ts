@@ -18,7 +18,7 @@ export default {
     library: 'ticktock'
   },
   resolve: {
-    extensions: [ '.ts', '.js', '.json' ]
+    extensions: ['.ts', '.js', '.json']
   },
   externals: [
     angularExternals(),
@@ -73,11 +73,6 @@ export default {
       path.join(__dirname, 'src')
     ),
 
-    new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/,
-      sourceMap: true
-    }),
-
     new webpack.BannerPlugin({
       banner: `
 /**
@@ -92,5 +87,8 @@ export default {
       entryOnly: true
     })
 
-  ]
+  ],
+  optimization: {
+    minimize: true,
+  }
 } as webpack.Configuration;
