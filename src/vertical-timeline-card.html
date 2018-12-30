@@ -1,6 +1,6 @@
 <div>
   <div class="timeline-img" [style.background]="color">
-    <p *ngIf="!timeString || timeString === ''" [style.color]="textColor">{{dateValue | date: "HH:mm"}}</p>
+    <p *ngIf="!timeString || timeString === ''" [style.color]="textColor">{{timebox}}</p>
     <p *ngIf="timeString && timeString != ''" [style.color]="textColor">{{timeString}}</p>
   </div>
 
